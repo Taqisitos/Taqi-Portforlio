@@ -1,20 +1,21 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
-
-// Ext Components
-import ColorSchemesExample from "./components/Navbar.js";
 
 // Int Components
-import Intro from './components/Intro';
-import Work from './components/Work';
+import Home from './Home.js';
 
 function App() {
   return (
     <>
-        <ColorSchemesExample/>
-        <Intro/>
-        <Work/>
+        <BrowserRouter>
+          <Routes>
+          <Route path="/" element={<Home />}/>
+            <Route path="/home" element={<Home />}/>
+            <Route path="#work" element={<Home />}/>
+            <Route path="/resume" element={<Home />}/>
+          </Routes>
+        </BrowserRouter>
     </>
   );
 }

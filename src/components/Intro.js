@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Intro.css';
 
@@ -10,6 +10,7 @@ import me from "../assets/me.png";
 import insta from "../assets/insta.jpeg";
 import linkedIn from "../assets/linked-in.png";
 import gitHub from "../assets/github.png";
+import gmail from "../assets/gmail.jpeg";
 
 function Intro() {
     return (
@@ -32,15 +33,20 @@ function Intro() {
                     </div>
 
                     <div className='socials'>
-                        <div className='social-icon'>
-                            <Image src={insta} fluid roundedCircle/>
-                        </div>
-                        <div className='social-icon'>
-                            <Image src={linkedIn} fluid roundedCircle/>
-                        </div>
-                        <div className='social-icon'>
-                            <Image src={gitHub} fluid roundedCircle/>
-                        </div>
+                      
+                            <a href="https://www.instagram.com/taqisitos/" target="_blank" rel="noopener noreferrer">
+                                <Image className='social-icon' src={insta} roundedCircle/>
+                            </a>
+                            <a href="https://www.linkedin.com/in/taqi-hossain/" target="_blank" rel="noopener noreferrer">
+                                <Image className='social-icon' src={linkedIn} roundedCircle/>
+                            </a>
+                            <a href="https://www.github.com/Taqisitos/" target="_blank" rel="noopener noreferrer">
+                                <Image className='social-icon' src={gitHub} roundedCircle/>
+                            </a>
+                            <a href="mailto: taqi.hossain@gmail.com" rel="noopener noreferrer">
+                                <Image className='social-icon' src={gmail} roundedCircle/>
+                            </a>
+                        
                     </div>
 
                 </div>
